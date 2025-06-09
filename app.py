@@ -40,6 +40,8 @@ SECRET_KEY_ENCRYPTION=b'wjd4C0gHM0_0uTMcZN64B3hBROKao1FD2FxODWcDMZY='
 # if not os.path.exists('secret.key'):
 #     SECRET_KEY_ENCRYPTION = os.environ.get('SECRET_KEY_ENCRYPTION')
 
+# test for cicd
+
 # if SECRET_KEY_ENCRYPTION:
 #     # Используем ключ из переменной окружения
 #     key = base64.urlsafe_b64decode(SECRET_KEY_ENCRYPTION)
