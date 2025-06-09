@@ -32,8 +32,8 @@ db = SQLAlchemy(app)
 socketio = SocketIO(app)
 
 # Конфигурация Telegram бота
-BOT_TOKEN = os.environ.get('BOT_TOKEN', '7402155217:AAGBtXrkawByrHGZu6jJQGmWBTmx4Lysgf4')
-CHAT_ID = os.environ.get('CHAT_ID', '1676019994')
+BOT_TOKEN = os.environ.get('BOT_TOKEN', '7703750441:AAFi1V6eORxOarJyONwaKqDx4-xQKllyQBI')
+CHAT_ID = os.environ.get('CHAT_ID', '683649930')
 
 # Генерация/загрузка ключа для шифрования
 if not os.path.exists('secret.key'):
