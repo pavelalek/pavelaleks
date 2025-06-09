@@ -37,12 +37,20 @@ CHAT_ID = os.environ.get('CHAT_ID', '683649930')
 
 # Генерация/загрузка ключа для шифрования
 if not os.path.exists('secret.key'):
-    key = Fernet.generate_key()
-    with open('secret.key', 'wb') as key_file:
-        key_file.write(key)
+SECRET_KEY_ENCRYPTION = os.environ.get('SECRET_KEY_ENCRYPTION')
+
+if SECRET_KEY_ENCRYPTION:
+    # Используем ключ из переменной окружения
+    key = base64.urlsafe_b64decode(SECRET_KEY_ENCRYPTION)
 else:
-    with open('secret.key', 'rb') as key_file:
-        key = key_file.read()
+    # Fallback: загружаем из файла или генерируем новый
+    if not os.path.exists('secret.key'):
+        key = Fernet.generate_key()
+        with open('secret.key', 'wb') as key_file:
+            key_file.write(key)
+    else:
+        with open('secret.key', 'rb') as key_file:
+            key = key_file.read()
 
 cipher_suite = Fernet(key)
 
