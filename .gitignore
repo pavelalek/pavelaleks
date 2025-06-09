@@ -37,8 +37,3 @@ instance/
 
 # Environment variables
 .env
-
-# Docker
-Dockerfile
-docker-compose.yml
-.dockerignore 
