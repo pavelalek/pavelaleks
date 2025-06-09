@@ -37,7 +37,7 @@ CHAT_ID = os.environ.get('CHAT_ID', '683649930')
 
 # Генерация/загрузка ключа для шифрования
 if not os.path.exists('secret.key'):
-SECRET_KEY_ENCRYPTION = os.environ.get('SECRET_KEY_ENCRYPTION')
+    SECRET_KEY_ENCRYPTION = os.environ.get('SECRET_KEY_ENCRYPTION')
 
 if SECRET_KEY_ENCRYPTION:
     # Используем ключ из переменной окружения
